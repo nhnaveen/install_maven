@@ -16,11 +16,11 @@ wget $DOWNLOAD_URL
 echo "Extracting Maven..."
 tar -xvzf $MAVEN_TAR
 
-echo "Moving Maven to /home/ubuntu/"
-sudo mv $MAVEN_DIR /home/ubuntu/
+echo "Moving Maven to /usr/"
+sudo mv $MAVEN_DIR /usr/
 
 echo "Configuring environment variables..."
-echo "export M2_HOME=/home/ubuntu/$MAVEN_DIR" >> ~/.bashrc
+echo "export M2_HOME=/usr/$MAVEN_DIR" >> ~/.bashrc
 echo "export PATH=\$M2_HOME/bin:\$PATH" >> ~/.bashrc
 source ~/.bashrc
 
