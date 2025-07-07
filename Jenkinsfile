@@ -7,13 +7,13 @@ pipeline {
     }
 
     stages {
-        stage (clone repository){
+        stage ('clone repository'){
             steps {
                 git url: "${GIT_REPO}", branch: 'main'
             }
         }
 
-        stage (install_maven) {
+        stage ('install_maven') {
             steps {
                 sh "chmod +x ${env.SCRIPT_PATH}"
                 sh "./${env.SCRIPT_PATH}"
