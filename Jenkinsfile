@@ -20,13 +20,16 @@ pipeline {
                 }
             }
         }
-        
-        stage ('install_maven') {
+
+        stage('Build') {
             steps {
-                sh '''
-                  chmod 777 maven.sh
-                  ./maven.sh
-                '''
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage ('test') {
+            steps {
+                sh 'mvn test'
             }
         }
     }
