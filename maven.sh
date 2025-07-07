@@ -17,7 +17,7 @@ echo "Extracting Maven..."
 tar -xvzf $MAVEN_TAR
 
 echo "Moving Maven to /opt/"
-mv $MAVEN_DIR /opt/
+sudo mv $MAVEN_DIR /opt/
 
 echo "Configuring environment variables..."
 echo "export M2_HOME=/opt/$MAVEN_DIR" >> ~/.bashrc
